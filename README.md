@@ -33,45 +33,11 @@ Ao criar este aplicativo, eu procurei manter a simplicidade e a facilidade de co
 
 Essa simplicidade pode ser uma vantagem em muitos casos, especialmente para iniciantes que estão aprendendo a desenvolver aplicativos web ou para projetos que exigem uma implementação rápida e direta. Além disso, ao compartilhar a minha experiência, posso inspirar outros desenvolvedores a explorar alternativas e experimentar diferentes tecnologias em seus próprios projetos.
 
-## COMO USAR?
-### BAIXANDO O PROJETO:
-* Clone o repositório para o seu sistema local:
-
-```bash
-git clone https://github.com/VILHALVA/CADASTRO-E-LOGIN-COM-NODEJS.git
-```
-
-* Navegue até o diretório do projeto.
-
-```bash
-cd CADASTRO-E-LOGIN-COM-NODEJS
-```
-
-* Descompacte o arquivo ZIP (se você baixou manualmente):
-
-```bash
-unzip CADASTRO-E-LOGIN-COM-NODEJS.zip
-```
-
-### EXECUTANDO O PROJETO:
+## EXECUTANDO O PROJETO:
 1. **Configuração do Banco de Dados:**
-
-   - Crie um banco de dados MySQL chamado `registro`:
-   ```sql
-   CREATE DATABASE registro;
-   ```
-   - Execute o seguinte comando SQL para criar a tabela `clientes`:
-
-     ```sql
-     CREATE TABLE clientes (
-         id INT AUTO_INCREMENT PRIMARY KEY,
-         email VARCHAR(50) NOT NULL,
-         senha VARCHAR(255) NOT NULL
-     );
-     ```
+   - Antes de executar o site, é necessário importar o arquivo `DATABASE.sql`. Se não estiver familiarizado com o processo de importação, [confira este curso](https://github.com/VILHALVA/CURSO-DE-MYSQL) para orientações detalhadas.
 
 2. **Configuração do JS:**
-
    - Abra o arquivo `./CODIGO/CODIGO.js` e ajuste as configurações do seu banco de dados nos parâmetros de `sequelize`:
 
      ```javascript
@@ -82,7 +48,6 @@ unzip CADASTRO-E-LOGIN-COM-NODEJS.zip
      ```
 
 3. **Instalando as Depêndencias:**
-
    - Para instalar as dependências listadas no arquivo "package.json", você pode usar o comando `npm install` ou simplesmente `npm i` no terminal. Certifique-se de estar no diretório do seu projeto onde o arquivo "package.json" está localizado. O npm irá ler o arquivo "package.json" e instalar todas as dependências listadas nele. 
 
    - Aqui está o comando:
@@ -98,7 +63,6 @@ unzip CADASTRO-E-LOGIN-COM-NODEJS.zip
    ```
 
 4. **Executando o Aplicativo:**
-
    - Para subir o servidor, no diretório do seu [projeto](./CODIGO/CODIGO.js), digite o seguinte comando no Terminal/CMD:
    ```bash
    node CODIGO.js
