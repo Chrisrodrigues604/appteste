@@ -4,16 +4,17 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = 3000;
+const port = 80;
 const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const conexao = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'registro'
+  host: '127.0.0.1',
+  user: 'appuser',
+  password: '729Ae8!6',
+  database: 'registro',
+  socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
 conexao.connect((err) => {
@@ -59,6 +60,6 @@ app.post('/formulario', (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0',() => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
